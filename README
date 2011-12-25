@@ -1,0 +1,72 @@
+       DBLess blog system in PHP. Uses Smarty template system.
+
+
+     |                          *This project is incomplete* |
+     |-------------------------------------------------------|
+     | Perms. problems yet to solve, feeds and some comments |
+     | and users features are in the /TODO/ list.            |
+
+
+     |                 *This project is no longer continued* |
+     |-------------------------------------------------------|
+     | Its only purpose was to understand some PHP concepts. |
+
+
+#Quick start#
+
+First of all, you need an administrator account. There is one:
+
+    * Username: admin
+    * Password: pass
+
+You must change the password in the preferences page after logging
+in. When you are logged in, an administration button will appear at
+the top of the page. There you can add, edit or remove posts, moderate
+comments and manage users.
+
+Make sure that the directories permissions are OK, so DBLess can write
+on them.
+
+#Users#
+
+New users can create an account in the join form. All users created
+will be regular users and their accounts are needed only to make any
+comments showing some identity (nickname).
+
+#Creating an aministrator#
+
+All administrators have the same privileges. This site was intented to
+be a only-one-administrator site. To create a new administator you
+need to create the user in the regular form, and then add his/her
+username to the administrators names array in `conf/site_admin.php'.
+
+#Languages#
+
+The posts are saved on its own language folder, so if you add a new
+post in English, the post will be saved in posts/en/ and will not be
+able to be seen from another language. If you want to run this site in
+more than one language you have to create a post for each language.
+
+#Adding a new language to the site#
+
+In order to add languages to the site so you can use it in a
+multilingual mode, you need three things:
+
+  * A language file stored in `langs/frontend/<language_code>/'
+
+  * A language file stored in `langs/backend/<language_code>/'
+
+  * A directory where to save the new incoming posts in
+    `posts/<language_code>'
+
+##Removing a language from the site##
+
+If you want to remove a language from your site, it will be enough
+removing the directory: `posts/<language_code>'. You don't need to
+remove the language file in `langs/'. It can stay there for a future
+use.
+
+When you access to your site in a language, the interface language
+will change too. If you enter in the administration in English, it's
+the administration for the English posts only.
+

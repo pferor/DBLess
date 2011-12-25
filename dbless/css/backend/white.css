@@ -1,0 +1,449 @@
+/*
+ * CSS theme for DBLess
+ *
+ * Theme description: Color explosion (just Black and White)
+ *
+ * The site will be constructed with tables, just to make sure the
+ * site is well seen under any circumstance, even without CSS.
+ *
+ * There are tables only when the information should be tabulated,
+ * i.e., on tables like archive table (archive page) and on forms.
+ * I still think forms should be displayed in a table.
+ *
+ * Note.
+ *  This is my first attempt to use a non-table design. Keeping the
+ *  design away from the content --except when a table is needed--.
+ *  Despite this facts, I intended to make this site compatible with
+ *  text webbrowsers and non-CSS capable ones.
+ */
+
+
+/* Multilanguage quotes */
+@import url("__quotes__.css");
+
+
+/* Site general */
+body {
+    background-color: #ff; /* white */
+    color:            #000; /* black */
+    font-family:      sans-serif;
+    font-size:        90%;
+    margin:           1ex 10% 1ex 10%
+}
+
+
+/* Personal preferences */
+.hidden {
+    display: none;
+}
+
+.atRight {
+    float:   right;
+    padding: 0ex 1ex 0ex 1ex;
+}
+
+.atLeft {
+    float: left;
+    padding: 0ex 1ex 0ex 0ex;
+}
+
+div#tip {
+    color:       #800;  /* dark red */
+    font-weight: bold;
+    font-style:  italic;
+    text-align:  right;
+    width:       100%;
+}
+
+div#tip a {
+    text-decoration: underline !important;
+}
+
+div.video {
+    /*  margin: auto; */
+    text-align: center;
+}
+
+/* A bit of style inside the classic theme! */
+/*
+:target {
+    background-color: #ffc !important;
+    color:            #000 !important;
+}
+*/
+
+
+/* General */
+cite {
+    font-style: italic;
+}
+
+code {
+    background-color: #ffc;
+    color:            #000;
+    font-family:      courier, monospace;
+}
+
+pre {
+    font-family: courier, monospace;
+}
+
+hr {
+    border-bottom: 1px #d3d3d3 solid; /* lightgray */
+    border-left:   none;
+    border-right:  none;
+    border-top:    none;
+}
+
+td {
+    vertical-align: top;
+}
+
+
+/* Links */
+a, :link, a:visited, a:active, a:hover {
+    color:           #000; /* black */
+    font-weight:     bold;
+    text-decoration: underline;
+}
+
+a.action {
+    background-color: #ffc;
+    border:           1px #000 dotted;
+    color:            #000;
+    display:          block;
+    font-weight:      normal;
+    padding:          0.5ex;
+    text-align:       center;
+    text-decoration:  none;
+    text-transform:   uppercase;
+}
+
+
+/* Title */
+div#main_title {
+    margin: 0;
+    width:  100%;
+}
+
+div#main_title a {
+    text-decoration: none;
+}
+
+
+div#main_title div#site_name h1,
+div#main_title div#site_name h2 {
+    margin: 0;
+}
+
+
+div#main_options {
+    float:   right;
+    display: inline;
+}
+
+div#languages_bar {
+    text-align: right;
+}
+
+/* Navigation */
+div#main_navigator {
+    border:  none;
+    display: block;
+    width:   100%;
+}
+
+div#main_navigator ul {
+    list-style: none;
+    padding:    0.5em 0 2em 0;
+    margin:     auto;
+}
+
+div#main_navigator li {
+    background-color: #fff;              /* white */
+    border:           1px #d3d3d3 solid; /* lightgray */
+    color:            #000;              /* black */
+    float:            left;
+    height:           2.2ex;
+    margin:           1px;
+    padding:          1px;
+    text-align:       center;
+    text-transform:   lowercase;
+
+    /* Important note: The following property requires you to know how
+     * many entries will be in the navigator. This make a more symmetric
+     * view, but if you add or remove an option, you have to modify this
+     * value. If you don't know how to use this, the comment the line.
+     * It must be set to 100/<number_of_entries>% - <margin>, where
+     * <margin> is the border_width + padding + margin of this
+     * entity. */
+    width: 15.8%; /* 6 options without wrap on a width of 800px or more */
+    /*width: 19.4%;*/ /* 5 options */
+}
+
+div#main_navigator li:hover {
+    background-color: #000;              /* black */
+    border:           1px #d3d3d3 solid; /* lightgray */
+    color:            #fff;              /* white */
+}
+
+div#main_navigator li.selected {
+    background-color: #000;           /* black */
+    border:           1px #000 solid; /* black */
+    color:            #fff;           /* white */
+}
+
+div#main_navigator li a {
+    color:           #000; /* black */
+    display:         block;
+    text-decoration: none;
+}
+
+div#main_navigator li:hover a,
+div#main_navigator li:hover a:active,
+div#main_navigator li.selected a {
+    color:           #fff; /* white */
+    text-decoration: none;
+}
+
+
+div.logfile pre#logcontent {
+    background-color: #eee;
+    border:           1px #999 solid;
+    color:            #00f;
+    font-size:        80%;
+    padding:          1em;
+}
+
+/* Headers */
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    color:       #000;
+    font-family: serif;
+    font-size:   150%;
+    font-weight: normal;
+}
+
+h3 {
+    border-bottom: 1px #d3d3d3 solid; /* lightgray */
+    color:         #000;
+    font-family:   serif;
+    font-size:     140%;
+    font-weight:   normal;
+}
+
+h4 {
+    color:       #696969; /* dimgray */
+    font-size:   100%;
+    font-weight: normal;
+}
+
+h5 { font-size: 90%; }
+
+h6 { font-size: 80%; }
+
+
+/* Posts table */
+table#comments,
+table#posts,
+table#users {
+    margin-top: 1em;
+    width:      100%;
+}
+
+table#comments th,
+table#posts th,
+table#users th {
+    border-bottom: 1px #89a solid;
+    color:         #000;
+    font-weight:   bold;
+    text-align:    center;
+}
+
+table#comments td,
+table#posts td,
+table#users td {
+    border-bottom: 1px #89a solid;
+    padding:       0.25ex;
+}
+
+table#users td {
+    text-align: center;
+}
+
+table#¢omments td.post,
+table#posts td.title {
+    width: 25%;
+}
+
+table#comments td.comment,
+table#posts td.description {
+    width: 60%;
+}
+
+table#comments td.actions {
+    text-align: center;
+}
+
+
+/* Footer */
+div#footer {
+    text-align: center;
+}
+
+div#syndication,
+div#license {
+    font-size:  80%;
+    margin:     1ex;
+}
+
+div#validation {
+    font-size:      70%;
+    text-transform: uppercase;
+    margin:         1em 0em 0em 0em;
+}
+
+
+/* Forms */
+/* generic forms */
+span.required_field {
+    color: #f80;
+}
+
+label {
+    font-weight: normal;
+}
+
+input, select, textarea {
+    background-color: #f5f5f5;           /* whitesmoke */
+    border:           1px #d3d3d3 solid; /* lightgray */
+    color:            #000;              /* black */
+    font-family:      sans-serif;
+    font-size:        80%;
+/*
+    font-family:      monospace;
+    font-size:        100%;
+*/
+    width:            30ex;
+}
+
+input.wide, select.wide, textarea.wide {
+    width: 50ex;
+}
+
+input.wider, select.wider, textarea.wider {
+    width: 75ex;
+}
+
+fieldset {
+    border:     1px #ccc dotted;
+    margin-top: 1em;
+}
+
+input[disabled='disabled'],
+input.disabled {
+    color: #777;
+}
+
+input.button, input.button:hover {
+    border-width: 1px;
+    border-style: outset;
+    font-family:  sans-serif;
+    font-size:    80%;
+    width:        auto;
+}
+
+input.button:active {
+    border-style: inset;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: #eee;
+    border:           1px #000 solid;
+    color:            #000;
+}
+
+table.logout,
+table.kill {
+    margin:     auto;
+    text-align: center;
+}
+
+form#logout input.logout_button,
+form#kill input.kill_button {
+    font-size: 150%;
+}
+
+form#siteinfo label,
+form#licenseinfo label {
+    display:    block;
+    text-align: right;
+    width:      10em;
+}
+
+
+/* posts form */
+input.delete {
+    background-color: #c00;
+    color:            #fff;
+    font-weight:      bold;
+}
+
+form#post table.post {
+    width: 100%;
+}
+
+form#post table.post td.author,
+form#post table.post td.timestamp {
+    width: 50%;
+}
+
+form#post table.post input,
+form#post table.post textarea {
+    width: 100%;
+}
+
+form#post table.post input.button {
+    width: auto;
+}
+
+form#post input#title {
+    font-size: 200%;
+}
+
+form#post input#summary {
+    font-size: 150%;
+}
+
+
+/* Messages */
+span.form_error {
+    color:       #dc143c;           /* crimson */
+    font-weight: normal;
+}
+
+div.error {
+    background-color: #ffefef;
+    border:           3px #dc143c solid; /* crimson */
+    color:            #dc143c;           /* crimson */
+    font-weight:      bold;
+    text-align:       center;
+    padding:          0.5em;
+    margin:           0.25em auto;
+    width:            70%;
+}
+
+div.success {
+    background-color: #efffef;
+    border:           3px #070 solid; /* a dark green */
+    color:            #070;           /* a dark green */
+    font-weight:      bold;
+    text-align:       center;
+    padding:          0.5em;
+    margin:           0.25em auto;
+    width:            70%;
+}
+

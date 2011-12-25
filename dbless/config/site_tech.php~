@@ -1,0 +1,98 @@
+<?php
+/**
+ * @file site_tech.php
+ *
+ * @brief Site technical details such as language, CSS, etc.
+ */
+
+/* This deinitions here removes some notices (kind of soft warnings)
+ * in some PHP versiosn */
+if (!defined ('TITLES'))    { define('TITLES',    1); }
+if (!defined ('SUMMARIES')) { define('SUMMARIES', 2); }
+if (!defined ('CONTENTS'))  { define('CONTENTS',  4); }
+
+
+/* Site language by default. It must be guaranteed this language
+ * exists and it's a valid language file.
+ *   Default value: 'en'  */
+$SITE_DEFAULT_LANGUAGE  = 'es'; /* Language used by default. Do not
+                                 * use any extension. */
+
+
+/* Skin used. It must be in $DIR_CSS (currently: 'white' || 'blue').
+ *   Default value: 'white'  */
+$SITE_DEFAULT_CSS_SKIN  = 'white'; /* Do not use the extension, just
+                                    * the name. */
+
+
+/* Number of posts on the front page
+ *   Default value: 5 */
+$MAX_POSTS_IN_FRONT_PAGE = 5;
+
+
+/* When a post does not have any summary, the archive table will show
+ * the first characters of the post. This variable sets its length.
+ *   Default value: 120 */
+$MAX_POSTS_CHARS_IN_SUMMARY_REPLACEMENT  = 120;
+
+
+/* A post is usually very long to show it all on the frontpage. The
+ * text shown on the home page will be from the beggining of the post
+ * to this delimiter. It is recommended to use a HTML comment.
+ *   Default value: '<!-- more -->' */
+$POST_DELIMITER_STRING  = '<!-- more -->';
+
+
+/* Log file. Every action will be added to the log file.
+ *   Default value:x true; */
+$LOG_ACTION = true;
+
+
+/* The posts in the front page are shown in plain text, without HTML
+ * entities or any kind of format. This is a good idea when you want
+ * to show a list of posts.
+ *   Default value: true
+ *   Recommended value: 'true'. */
+$POSTS_PREVIEW_IN_PLAIN_TEXT = true;
+
+/*
+ * [[ TIP ]]
+ * If you want to use the front page as the last post page, you can
+ * set:
+ *
+ *  $MAX_POSTS_IN_FRONT_PAGE     = 1;
+ *  $POST_DELIMITER_STRING       = '';
+ *  $POSTS_PREVIEW_IN_PLAIN_TEXT = false;
+ *
+ * WARNING!
+ *   It is *very* recommended to have a summary in all posts if you
+ *   don't use the post delimiter string.
+ */
+
+
+/* Set this to 'false' of you want only registered users to comment.
+ *   Default value: true */
+$ANONYMOUS_CAN_COMMENT = true;
+
+
+/* If this is 'true', comments will not be published until an
+ * administrator says so. Comments posted when this variable is 'false'
+ * will be considered approved and valid comments.
+ *   Default value: true */
+$COMMENTS_MODERATION = false;
+
+
+/* Search method
+ *
+ * TITLES | SUMMARIES | CONTENTS  -> Search in all the post data
+ * TITLES | SUMMARIES             -> Search only in titles and summaries
+ * TITLES | CONTENTS              -> Search only in titles and the post text
+ * SUMMARIES | CONTENTS           -> Search in all the post except the title
+ * CONTENTS                       -> Do not search on post title nor summary
+ * ...
+ *
+ * You can make any combination of these three values
+ *
+ *   Default value: TITLES | SUMMARIES | CONTENTS  */
+$SITE_SEARCH_METHOD = TITLES | SUMMARIES | CONTENTS;
+

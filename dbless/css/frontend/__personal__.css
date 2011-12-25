@@ -1,0 +1,16 @@
+/*
+ * These are users preferences, applicable to any style on the site.
+ * If the site style is changed, the posts classes won't be altered.
+ */
+
+/* Personal preferences */
+.atRight {
+    float:   right;
+    padding: 0ex 1ex 0ex 1ex;
+}
+
+.atLeft {
+    float: left;
+    padding: 0ex 1ex 0ex 0ex;
+}
+

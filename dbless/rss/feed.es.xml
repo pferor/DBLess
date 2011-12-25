@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>DBLess</title>
+<link>http://localhost/dbless/</link>
+<description>Database-less weblog systemDescription</description>
+  <item>
+    <title>Welcome to DBLess</title>
+    <link>http://localhost/dbless/?pg=post&amp;id=20100914200616</link>
+    <description>Thanks for downloading DBLess. Here you&#039;ll find some tip to get this site running at soon as possible. There is more information and manuals at http://pferor.org/dbless/.</description>
+    <guid>http://localhost/dbless/?pg=post&amp;id=20100914200616</guid>
+  </item>
+  <item>
+    <title>Welcome to DBLess</title>
+    <link>http://localhost/dbless/?pg=post&amp;id=20091111111111</link>
+    <description>Thanks for downloading DBLess. Here you&#039;ll find some tip to get this site running at soon as possible. There is more information and manuals at http://pferor.org/dbless/.</description>
+    <guid>http://localhost/dbless/?pg=post&amp;id=20091111111111</guid>
+  </item>
+</channel>
+</rss>
